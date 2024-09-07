@@ -91,7 +91,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query("select u from User u where u.level = :level and u.active = :active")
     List<User> findByLevelAndActive(@Param("level") int level, @Param("active") boolean active);
 
-    @Query(value = "SELECT COUNT(*) FROM USERS WHERE ACTIVE = ?1", nativeQuery = true)
+    @Query(value = "SELECT COUNT(*) FROM users WHERE ACTIVE = ?1", nativeQuery = true)
     int findNumberOfUsersByActivityNative(boolean active);
 
     @Query("select u.username, LENGTH(u.email) as email_length from #{#entityName} u where u.username like %?1%")

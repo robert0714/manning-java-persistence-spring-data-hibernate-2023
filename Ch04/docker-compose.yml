@@ -1,0 +1,20 @@
+services:
+  mysqldb:
+    container_name: mysql
+    image: mysql:8.0.37
+    # privileged: true
+    volumes:
+    # - /var/run/docker.sock:/var/run/docker.sock
+    # - /data2/mysql_container_data:/var/lib/mysql
+    # - $PWD/mysql_container_data:/var/lib/mysql   
+    - ./Ch04.sql:/docker-entrypoint-initdb.d/1-1-db.sql    
+    environment:
+    - MYSQL_ROOT_PASSWORD=rootpassword
+    - MYSQL_DATABASE=CH04_SPRINGDATAJPA
+    - MYSQL_USER=myuser
+    - MYSQL_PASSWORD=mypassword
+    - EXTRA_OPTS="--lower_case_table_names=1"
+    - TZ=Asia/Taipei
+    # network_mode:  "host"
+    ports: 
+    - "3306:3306" 
