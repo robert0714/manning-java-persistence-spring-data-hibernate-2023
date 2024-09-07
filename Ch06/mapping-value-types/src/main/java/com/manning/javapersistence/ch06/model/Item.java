@@ -71,7 +71,7 @@ public class Item {
     private String shortDescription;
 
     @Formula(
-            "(SELECT AVG(B.AMOUNT) FROM BID B WHERE B.ITEM_ID = ID)"
+            "(SELECT AVG(B.AMOUNT) FROM Bid B WHERE B.ITEM_ID = ID)"
     )
     private BigDecimal averageBidAmount;
 
