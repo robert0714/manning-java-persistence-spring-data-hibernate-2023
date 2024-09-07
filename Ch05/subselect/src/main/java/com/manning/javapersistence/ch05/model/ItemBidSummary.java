@@ -28,7 +28,7 @@ import javax.persistence.Id;
 @org.hibernate.annotations.Subselect(
         value = "select i.ID as ITEMID, i.NAME as NAME, " +
                 "count(b.ID) as NUMBEROFBIDS " +
-                "from ITEM i left outer join BID b on i.ID = b.ITEM_ID " +
+                "from Item i left outer join Bid b on i.ID = b.ITEM_ID " +
                 "group by i.ID, i.NAME"
 )
 
