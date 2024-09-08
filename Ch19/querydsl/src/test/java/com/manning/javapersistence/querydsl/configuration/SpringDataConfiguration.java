@@ -42,7 +42,7 @@ public class SpringDataConfiguration {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/CH19_QUERYDSL?serverTimezone=UTC");
         dataSource.setUsername("root");
-        dataSource.setPassword("");
+        dataSource.setPassword("rootpassword");
         return dataSource;
     }
 

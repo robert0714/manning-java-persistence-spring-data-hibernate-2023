@@ -11,7 +11,7 @@
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:mysql://localhost:3306/CH13_CASCADE?sessionVariables=transaction_isolation='READ-COMMITTED'&amp;serverTimezone=UTC"/>
             <property name="javax.persistence.jdbc.user" value="root"/>
-            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.password" value="rootpassword"/>
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
 
