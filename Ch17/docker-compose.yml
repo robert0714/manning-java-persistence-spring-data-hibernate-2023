@@ -7,7 +7,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
-      MONGO_INITDB_DATABASE: springdatamongodb
+      MONGO_INITDB_DATABASE: hibernate_ogm
       TZ: Asia/Taipei
 #    volumes: 
 #      - ./database/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro

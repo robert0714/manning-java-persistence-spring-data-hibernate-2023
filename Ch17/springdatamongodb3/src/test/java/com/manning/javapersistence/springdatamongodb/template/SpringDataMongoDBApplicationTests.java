@@ -32,7 +32,9 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 
 import static com.manning.javapersistence.springdatamongodb.GenerateUsers.generateUsers;
-
+/**
+ * https://www.baeldung.com/junit-testinstance-annotation
+ * **/
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 abstract class SpringDataMongoDBApplicationTests {
@@ -41,7 +43,7 @@ abstract class SpringDataMongoDBApplicationTests {
     MongoTemplate mongoTemplate;
 
     @BeforeAll
-    void beforeAll() {
+    void beforeAll() { 
         mongoTemplate.insert(GenerateUsers.address);
         mongoTemplate.insert(generateUsers(), User.class);
     }

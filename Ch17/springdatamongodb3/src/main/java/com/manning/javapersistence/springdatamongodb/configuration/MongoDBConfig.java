@@ -29,6 +29,10 @@ import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 
+/***
+ * 
+ * https://www.mongodb.com/docs/drivers/java/sync/current/fundamentals/auth/#mechanisms
+ * */
 @Configuration
 public class MongoDBConfig extends AbstractMongoClientConfiguration {
 
@@ -36,15 +40,23 @@ public class MongoDBConfig extends AbstractMongoClientConfiguration {
     private String host;
     @Value("${spring.data.mongodb.port}")
     private int port;
+    
+    @Value("${spring.data.mongodb.username}")
+    private String username;
+    @Value("${spring.data.mongodb.password}")
+    private String password;
+     
 
     @Override
     public String getDatabaseName() {
-        return "test";
+        return "springdatamongodb";
     }
 
     @Override
     public MongoClient mongoClient() {
-        String url = String.format("mongodb://%s:%d", host, Integer.valueOf(port));
+        String url = String.format("mongodb://%s:%s@%s:%d",
+        		    username , password , host, Integer.valueOf(port));
+        
         ConnectionString connectionString = new ConnectionString(url);
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
             .applyConnectionString(connectionString)
