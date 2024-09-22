@@ -197,7 +197,7 @@ public class Cascade {
 
                 // Update the bank account
                 ps = con.prepareStatement(
-                        "update BILLINGDETAILS set OWNER = ? where USER_ID = ?"
+                        "update BillingDetails set owner = ? where USER_ID = ?"
                 );
                 ps.setString(1, "Doe John");
                 ps.setLong(2, SOME_USER_ID);
