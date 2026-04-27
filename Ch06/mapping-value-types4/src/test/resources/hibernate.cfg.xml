@@ -7,7 +7,7 @@
             com.mysql.cj.jdbc.Driver
         </property>
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/CH06_MAPPING_VALUE_TYPES?serverTimezone=UTC
+            jdbc:mysql://localhost:3306/CH06_MAPPING_VALUE_TYPES?serverTimezone=Asia/Taipei
         </property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">rootpassword</property>

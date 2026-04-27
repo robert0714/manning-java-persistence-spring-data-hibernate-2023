@@ -45,7 +45,7 @@ public class SpringDataConfiguration {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/CH09_ADVANCED_MAPPINGS_ONETOONE_SHAREDPRIMARYKEY?serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/CH09_ADVANCED_MAPPINGS_ONETOONE_SHAREDPRIMARYKEY?serverTimezone=Asia/Taipei");
         dataSource.setUsername("root");
         dataSource.setPassword("rootpassword");
         return dataSource;
